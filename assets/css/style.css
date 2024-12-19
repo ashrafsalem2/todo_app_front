@@ -5,3 +5,24 @@ body{
 .task_body{
     background-color: #012839;
 }
+
+.task{
+    background-color: #009788;
+    color:#fff;
+    transition: all 0.5s;
+}
+
+.task:hover{
+    width: 80% !important;
+}
+
+.task i{
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.task i:hover{
+    color: #012839;
+}
+/* #009788 */
