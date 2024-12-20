@@ -23,7 +23,7 @@ async function addTodoTask(task) {
   });
 
   var result = await data.json();
-  console.log(result);
+
   if (result.message == "success") {
     getAllTodos();
   }
@@ -52,10 +52,25 @@ function displayTodos(result) {
                 <div>${result.todos[i].title}</div>
                 <div>
                     <i class="fa-regular fa-circle-check mx-3"></i>
-                    <i class="fa-solid fa-trash"></i>
+                    <i onclick="deleteTask('${result.todos[i]._id}')" class="fa-solid fa-trash"></i>
                 </div>
             </div>
         `;
   }
   tasks.innerHTML = allTasks;
+}
+
+
+// delete function
+async function deleteTask(id){
+    var data = await fetch("https://todos.routemisr.com/api/v1/todos",{
+        method:'delete',
+        body:JSON.stringify({todoId: id}),
+        headers:{'content-type': 'application/json'}
+    });
+
+    var result = data.json();
+    if(result.message === 'success'){
+        getAllTodos();
+    }
 }
