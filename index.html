@@ -18,7 +18,15 @@
             <input type="text" class="form-control rounded w-75" name="task" id="task_input" placeholder="Add New Todo ...">
             <button class="btn btn-primary" id="btn">Add Task</button>
         </div>
-        <h2 class="text-center text-white my-4">All Tasks</h2>
+        <div class="alert alert-danger m-3 d-none errors">
+            <span class="text-danger" id="error_msg"></span>
+        </div>
+      
+       
+        <h2 class="text-center text-white my-4" id="header_msg">All Tasks</h2>
+        <div class="text-center my-2 d-none" id="load">
+            <span class="loader"></span>
+       </div>
         <div class="tasks">
            
         </div>
