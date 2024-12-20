@@ -6,6 +6,14 @@ body{
     background-color: #012839;
 }
 
+@media screen and (max-width:1199px) {
+    .task_body{
+        width: 85% !important;
+    }
+    #task_input{
+        margin-inline-end: 10px !important;
+    }  
+}
 .task{
     background-color: #009788;
     color:#fff;
