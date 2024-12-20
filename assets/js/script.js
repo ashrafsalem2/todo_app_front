@@ -31,6 +31,7 @@ async function addTodoTask(task) {
   if (result.message == "success") {
     getAllTodos();
     errors.classList.add("d-none");
+    taskInput.value = "";
   } else if(result.message == "error"){
     errors.classList.remove("d-none");
     error_msg.innerText="You Must Enter Task to save it"
